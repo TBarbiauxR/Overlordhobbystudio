@@ -1,0 +1,382 @@
+:root {
+  --padding-base: 100px;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Offside', cursive, 'Roboto', sans-serif;
+  background-color: black;
+}
+
+strong {
+  color: #f25c05;
+}
+
+
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #333;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  font-size: 15px;
+}
+
+.navbar a {
+  margin: 0 8px;
+  /* el orden del padding va en sentido de las manecillas del reloj / se pueden solo ocupar 2 , si se ocupa un tercero seria para abajo //////  altz para que se adapte */
+  color: white;
+  padding: 10px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f25c05;
+  transform: scale(1.5);
+}
+
+
+/*//////////////////////////////////////////////////////primera pantalla negra:logo///////////////////////////////////////////////////////////*/
+.black1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.black1 img {
+  width: 50%;
+}
+
+.black1 h1 {
+  color: #EFECE5;
+  font-size: 35px;
+  text-align: center;
+}
+
+.overlogo {
+  transition: transform 0.8s;
+}
+
+.overlogo:hover {
+  transform: scale(1.1);
+}
+
+
+
+/*////////////////////////////////////////////primer pantalla blanca: marca///////////////////////////////////////////*/
+.white1 {
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  padding-top: var(--padding-base);
+  padding-bottom: var(--padding-base);
+}
+
+.white1>img {
+  width: 50%;
+}
+
+.textomarca>h2 {
+  font-size: 40px;
+  text-align: center;
+  color: #f25c05;
+}
+
+.textomarca {
+  padding: 30px 30px 0 30px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+
+
+/*//////////////////////////////////  2da pantalla negra conocenos/////////////////////////////////*/
+.black2 {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.textvid {
+  color: #f25c05;
+  text-align: center;
+  font-size: 35px;
+}
+.textvid iframe {
+  width: 100%;
+}
+/*//////////////////////////////////// 2da pantalla blanca tiendas amigas////////////////////////////////////*/
+
+.white2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #EFECE5;
+}
+
+.white2>h4 {
+  color: #f25c05;
+  font-size: 50px;
+  text-align: center;
+}
+
+.logoshop:hover img {
+  transition: transform 0.8s;
+  transform: scale(0.8);
+}
+
+
+
+
+/*///////////////////////////////////////3ra pantalla negra redessociales//////////////////////////////////////////////*/
+
+.black3 {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 100px 100px;
+  height: 100vh;
+}
+
+.redessociales {
+  padding: 50px 100px 50px 100px;
+}
+
+.misredes>h5 {
+  color: #f25c05;
+  text-align: center;
+  font-size: 35px;
+  flex-direction: row;
+}
+
+.redes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+
+.redes a {
+  text-decoration: none;
+  color: #EFECE5;
+  text-align: center;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover {
+  color: #f25c05;
+}
+
+.logored img {
+  transition: transform 0.8s;
+  height: 100%;
+}
+
+.logored:hover img {
+  transform: scale(1.1);
+
+}
+
+
+
+/*///////////////////////////////////////Footer//////////////////////////////////////////////*/
+footer {
+  background-color: black;
+  color: #EFECE5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 25px;
+  border-top: 5px solid #333;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+  /* padding-left: 200px */
+}
+
+/* Tablet y desktop*/
+@media screen and (max-width:1024px) {
+  .black1 img {
+    width: 100%;
+  }
+
+  .white1 {
+    flex-wrap: wrap;
+    height: unset;
+  }
+
+  .white1 img {
+    width: 100%;
+  }
+
+  .black2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: unset;
+  }
+
+  .black3 {
+    flex-wrap: wrap;
+    height: unset;
+  }
+
+  .videoredes {
+    margin: 0 auto;
+    order: 1;
+  }
+}
+
+/* Celulares grandes */
+@media screen and (max-width:768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+ 
+
+  .black2,
+  .white2 {
+    height: unset;
+  }
+
+  .logostiendas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logoshop {
+    width: 47%;
+  }
+
+  .black3,
+  .redessociales {
+    padding: 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width:768px) {
+  .black1 {
+    background-color: black;
+    height: 100vh;
+  }
+/*
+  .black1 img {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    width: 80vh;
+
+  }*/
+
+  h1 {
+    color: aliceblue;
+    text-align: center;
+  }
+
+
+}
+
+/*/////////////////////////////////////*/
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 768px) {
+/*
+  .black1 img {
+    width: 45%;
+  }
+*/
+  h1 {
+    color: aliceblue;
+    text-align: center;
+  }
+
+  /*/////////////////////////////////////*/
+  .white1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .white1 img {
+    height: 100vw;
+
+  }
+
+}
+
+/*/////////////////////////////////////
+
+.black2{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+h3{
+  text-align: center;
+}
+
+.black2 iframe{
+  height: 50vh;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width:992px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width:1200px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
